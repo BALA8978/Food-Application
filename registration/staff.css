@@ -7,7 +7,14 @@
 body {
   font-family: "Segoe UI", sans-serif;
   display: flex;
-  height: 100vh;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Container for the main left and right sections */
+.main-content {
+  display: flex;
+  flex: 1;
 }
 
 /* LEFT SIDE - Registration Form */
@@ -62,17 +69,20 @@ select {
 button {
   width: 100%;
   padding: 10px;
-  background-color: #EF476F;
+  background: linear-gradient(to right, #FFD700, #FFA500); /* Yellow to Orange */
   color: white;
   border: none;
   border-radius: 6px;
   font-size: 14px;
+  font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: transform 0.2s ease, opacity 0.3s ease;
+  box-shadow: 0 4px 10px rgba(255, 165, 0, 0.3);
 }
 
 button:hover {
-  background-color: #7A4E2C;
+  transform: scale(1.02);
+  opacity: 0.95;
 }
 
 .login-link {
@@ -97,9 +107,20 @@ button:hover {
   background-position: center;
 }
 
+/* Footer */
+.site-footer {
+  background-color: #2C3A4D;
+  color: white;
+  text-align: center;
+  padding: 30px 30px;  /* increased padding */
+  font-size: 16px;     /* increased font size */
+  font-weight: 500;
+}
+
+
 /* Responsive for small screens */
 @media screen and (max-width: 768px) {
-  body {
+  .main-content {
     flex-direction: column;
   }
 

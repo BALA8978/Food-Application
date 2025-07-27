@@ -59,20 +59,23 @@
     }
 
     button {
-      width: 100%;
-      padding: 10px;
-      background-color: #EF476F;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      font-size: 14px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(to right, #FFD700, #FFA500); /* Yellow to Orange */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.3s ease;
+  box-shadow: 0 4px 10px rgba(255, 165, 0, 0.3);
+}
 
-    button:hover {
-      background-color: #7A4E2C;
-    }
+button:hover {
+  transform: scale(1.02);
+  opacity: 0.95;
+}
 
     .register-link {
       margin-top: 10px;
