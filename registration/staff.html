@@ -8,6 +8,7 @@
 </head>
 <body>
 
+ Nikhila04
 <div class="main-content">
   <div class="left">
     <div class="register-box">
@@ -55,5 +56,95 @@
 </footer>
 
 <script src="script.js"></script>
+=======
+<div class="left">
+  <div class="register-box">
+    <img src="logo_food.png" alt="Gourmet Delight Logo">
+    <h2>Staff Registration</h2>
+    <form id="registerForm">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter name" required>
+
+      <label for="email">Email ID</label>
+      <input type="email" id="email" name="email" placeholder="Enter email" required>
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" placeholder="Enter phone" required>
+
+      <label for="role">Staff Role</label>
+      <select id="role" name="role" required>
+        <option value="">Select Role</option>
+        <option value="Chef">Chef</option>
+        <option value="Waiter">Waiter</option>
+        <option value="Manager">Manager</option>
+      </select>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Enter password" required>
+
+      <label for="confirm">Confirm Password</label>
+      <input type="password" id="confirm" name="confirm" placeholder="Re-enter password" required>
+
+      <button type="submit">Register</button>
+      <p id="message"></p> <!-- Success or Error message appears here -->
+    </form>
+
+    <div class="login-link">
+      Already registered? <a href="staff_login.html">Login here</a>
+    </div>
+  </div>
+</div>
+
+<div class="right"></div>
+
+<!-- ✅ Link to JavaScript file here -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("registerForm");
+  const phone = document.getElementById("phone");
+  const password = document.getElementById("password");
+  const confirm = document.getElementById("confirm");
+  const message = document.getElementById("message");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const phoneVal = phone.value.trim();s
+    const passwordVal = password.value.trim();
+    const confirmVal = confirm.value.trim();
+
+    const phoneRegex = /^\d{10}$/;
+    const passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*]).{8,}$/;
+
+    if (!phoneRegex.test(phoneVal)) {
+      showMessage("❌ Phone number must be exactly 10 digits.", "red");
+      return;
+    }
+
+    if (!passwordRegex.test(passwordVal)) {
+      showMessage("❌ Password must be at least 8 characters long and include 1 uppercase letter, 1 digit, and 1 special character.", "red");
+      return;
+    }
+
+    if (passwordVal !== confirmVal) {
+      showMessage("❌ Passwords do not match.", "red");
+      return;
+    }
+
+    showMessage("✅ Registration Successful!", "green");
+    form.reset();
+  });
+
+  function showMessage(text, color) {
+    message.textContent = text;
+    message.style.color = color;
+    message.style.fontWeight = "bold";
+    message.style.marginTop = "10px";
+  }
+});
+
+</script>
+
+main
 </body>
 </html>

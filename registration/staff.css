@@ -7,6 +7,7 @@
 body {
   font-family: "Segoe UI", sans-serif;
   display: flex;
+Nikhila04
   flex-direction: column;
   min-height: 100vh;
 }
@@ -15,6 +16,9 @@ body {
 .main-content {
   display: flex;
   flex: 1;
+=======
+  height: 100vh;
+main
 }
 
 /* LEFT SIDE - Registration Form */
@@ -69,11 +73,16 @@ select {
 button {
   width: 100%;
   padding: 10px;
+ Nikhila04
   background: linear-gradient(to right, #FFD700, #FFA500); /* Yellow to Orange */
+=======
+  background-color: #EF476F;
+main
   color: white;
   border: none;
   border-radius: 6px;
   font-size: 14px;
+ Nikhila04
   font-weight: bold;
   cursor: pointer;
   transition: transform 0.2s ease, opacity 0.3s ease;
@@ -83,6 +92,14 @@ button {
 button:hover {
   transform: scale(1.02);
   opacity: 0.95;
+=======
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #7A4E2C;
+  main
 }
 
 .login-link {
@@ -107,6 +124,7 @@ button:hover {
   background-position: center;
 }
 
+Nikhila04
 /* Footer */
 .site-footer {
   background-color: #2C3A4D;
@@ -121,6 +139,11 @@ button:hover {
 /* Responsive for small screens */
 @media screen and (max-width: 768px) {
   .main-content {
+=======
+/* Responsive for small screens */
+@media screen and (max-width: 768px) {
+  body {
+main
     flex-direction: column;
   }
 
