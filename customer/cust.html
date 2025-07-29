@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register - Gourmet Delight</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="main-content">
+    <div class="left-image"></div>
+
+    <div class="form-side">
+      <div class="form-container">
+
+        <div class="logo-container">
+          <img src="logo_food.png" alt="Gourmet Delight Logo" onerror="this.style.display='none'">
+        </div>
+
+        <h2>Create your Gourmet Delight Account</h2>
+
+        <form id="registerForm">
+          <!-- Corrected name attributes for backend -->
+          <label for="full_name">Full Name</label>
+          <input type="text" id="full_name" name="full_name" placeholder="Your name" required>
+
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+
+          <label for="phone_number">Phone Number</label>
+          <input type="tel" id="phone_number" name="phone_number" placeholder="10-digit phone number" required>
+
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="Min 8 chars" required>
+
+          <label for="confirm_password">Confirm Password</label>
+          <input type="password" id="confirm_password" name="confirm_password" placeholder="Re-enter password" required>
+
+          <button type="submit">Create Account</button>
+
+          <p id="message"></p>
+
+          <div class="separator">or</div>
+
+          <button class="google-btn" type="button">
+            <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google Logo">
+            Sign up with Google
+          </button>
+
+          <p class="signin-text">Already have an account? <a href="cust_login.html">Sign In</a></p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 Gourmet Delight. All rights reserved.</p>
+  </footer>
+
+  <!-- This now points to the correct, updated script -->
+  <script src="scripts.js"></script>
+
+</body>
+</html>

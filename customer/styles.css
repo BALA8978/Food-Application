@@ -1,0 +1,179 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  font-size: 17px; /* Increased font size */
+}
+
+/* Main layout for image and form */
+.main-content {
+  display: flex;
+  flex: 1;
+}
+
+/* Left Image Section */
+.left-image {
+  width: 60%;
+  background-image: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Right Form Section */
+.form-side {
+  width: 40%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-container {
+  width: 100%;
+  max-width: 380px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+label {
+  margin-top: 12px;
+  display: block;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(to right, #FFD700, #FFA500);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.3s ease;
+  box-shadow: 0 4px 10px rgba(255, 165, 0, 0.3);
+  margin-top: 16px;  /* 👈 Add this line */
+}
+
+
+button:hover {
+  transform: scale(1.02);
+  opacity: 0.95;
+}
+
+.separator {
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  color: #999;
+  position: relative;
+}
+
+.separator::before,
+.separator::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  height: 1px;
+  background: #ccc;
+}
+
+.separator::before {
+  left: 0;
+}
+
+.separator::after {
+  right: 0;
+}
+
+.logo-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.logo-container img {
+  width: 80px;
+  height: auto;
+}
+
+.signin-text {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 15px;
+  color: #333;
+}
+
+.signin-text a {
+  color: #ff6347;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.google-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: white;
+  color: #444;
+  font-weight: 500;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 12px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-size: 15px;
+}
+
+.google-btn:hover {
+  background-color: #f0f0f0;
+}
+
+.google-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+#message {
+  text-align: center;
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+/* Footer Styling */
+.site-footer {
+  background-color: #2C3A4D;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 16px;
+  font-weight: 500;
+}

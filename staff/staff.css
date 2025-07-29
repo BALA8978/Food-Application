@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Container for the main left and right sections */
+.main-content {
+  display: flex;
+  flex: 1;
+}
+
+/* LEFT SIDE - Registration Form */
+.left {
+  flex: 1;
+  background-color: #FFF6E6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.register-box {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
+  width: 90%;
+  max-width: 360px;
+  text-align: center;
+}
+
+.register-box img {
+  width: 70px;
+  margin-bottom: 15px;
+}
+
+.register-box h2 {
+  margin-bottom: 16px;
+  font-size: 20px;
+  color: #2C3A4D;
+}
+
+label {
+  display: block;
+  text-align: left;
+  margin: 6px 0 4px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #2C3A4D;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 13px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(to right, #FFD700, #FFA500); /* Yellow to Orange */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.3s ease;
+  box-shadow: 0 4px 10px rgba(255, 165, 0, 0.3);
+}
+
+button:hover {
+  transform: scale(1.02);
+  opacity: 0.95;
+}
+
+.login-link {
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+.login-link a {
+  color: #2C3A4D;
+  text-decoration: none;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+/* RIGHT SIDE - Full Background */
+.right {
+  flex: 1;
+  background-image: url('staff_page.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Footer */
+.site-footer {
+  background-color: #2C3A4D;
+  color: white;
+  text-align: center;
+  padding: 30px 30px;  /* increased padding */
+  font-size: 16px;     /* increased font size */
+  font-weight: 500;
+}
+
+
+/* Responsive for small screens */
+@media screen and (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+  }
+
+  .right {
+    height: 200px;
+    width: 100%;
+  }
+}

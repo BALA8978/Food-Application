@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Staff Registration - Gourmet Delight</title>
+  <link rel="stylesheet" href="staff.css"> <!-- Linking CSS -->
+</head>
+<body>
+
+<div class="main-content">
+  <div class="left">
+    <div class="register-box">
+      <img src="logo_food.png" alt="Gourmet Delight Logo" onerror="this.style.display='none'">
+      <h2>Staff Registration</h2>
+      <!-- The form ID is used by JavaScript. The name attributes are sent to PHP. -->
+      <form id="registerForm">
+        <label for="full_name">Full Name</label>
+        <input type="text" id="full_name" name="full_name" placeholder="Enter name" required>
+
+        <label for="email">Email ID</label>
+        <input type="email" id="email" name="email" placeholder="Enter email" required>
+
+        <label for="phone_number">Phone Number</label>
+        <input type="tel" id="phone_number" name="phone_number" placeholder="Enter phone" required>
+
+        <label for="role">Staff Role</label>
+        <select id="role" name="role" required>
+          <option value="">Select Role</option>
+          <option value="Chef">Chef</option>
+          <option value="Waiter">Waiter</option>
+          <option value="Manager">Manager</option>
+        </select>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter password" required>
+
+        <label for="confirm">Confirm Password</label>
+        <input type="password" id="confirm" name="confirm" placeholder="Re-enter password" required>
+
+        <button type="submit">Register</button>
+        <!-- This paragraph will show success or error messages from the server -->
+        <p id="message"></p>
+      </form>
+
+      <div class="login-link">
+        Already registered? <a href="staff_login.html">Login here</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="right"></div>
+</div>
+
+<footer class="site-footer">
+  <p>&copy; 2025 Gourmet Delight. All rights reserved.</p>
+</footer>
+
+<!-- Connects to the updated JavaScript file -->
+<script src="script.js"></script>
+</body>
+</html>

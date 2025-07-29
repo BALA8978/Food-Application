@@ -6,6 +6,7 @@
 }
 
 body {
+<<<<<<< HEAD
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -20,6 +21,13 @@ body {
 }
 
 /* Left Image Section */
+=======
+  height: 100vh;
+  display: flex;
+  background-color: #f5f5f5;
+}
+
+>>>>>>> 8007feeb23d2f7c335a62c5e5f43dca49723e3b1
 .left-image {
   width: 60%;
   background-image: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092');
@@ -27,7 +35,10 @@ body {
   background-position: center;
 }
 
+<<<<<<< HEAD
 /* Right Form Section */
+=======
+>>>>>>> 8007feeb23d2f7c335a62c5e5f43dca49723e3b1
 .form-side {
   width: 40%;
   background-color: #fff;
@@ -53,7 +64,10 @@ label {
   margin-top: 12px;
   display: block;
   font-weight: 600;
+<<<<<<< HEAD
   font-size: 15px;
+=======
+>>>>>>> 8007feeb23d2f7c335a62c5e5f43dca49723e3b1
 }
 
 input, select {
@@ -65,14 +79,23 @@ input, select {
   font-size: 15px;
 }
 
+<<<<<<< HEAD
 button {
   width: 100%;
   padding: 12px;
   background: linear-gradient(to right, #FFD700, #FFA500);
+=======
+button[type="submit"] {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #ff6347;
+>>>>>>> 8007feeb23d2f7c335a62c5e5f43dca49723e3b1
   color: white;
   border: none;
   border-radius: 6px;
   font-size: 16px;
+<<<<<<< HEAD
   font-weight: bold;
   cursor: pointer;
   transition: transform 0.2s ease, opacity 0.3s ease;
@@ -84,6 +107,14 @@ button {
 button:hover {
   transform: scale(1.02);
   opacity: 0.95;
+=======
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background-color: #e5533d;
+>>>>>>> 8007feeb23d2f7c335a62c5e5f43dca49723e3b1
 }
 
 .separator {
@@ -111,7 +142,10 @@ button:hover {
 .separator::after {
   right: 0;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8007feeb23d2f7c335a62c5e5f43dca49723e3b1
 .logo-container {
   text-align: center;
   margin-bottom: 20px;
@@ -125,7 +159,11 @@ button:hover {
 .signin-text {
   text-align: center;
   margin-top: 15px;
+<<<<<<< HEAD
   font-size: 15px;
+=======
+  font-size: 14px;
+>>>>>>> 8007feeb23d2f7c335a62c5e5f43dca49723e3b1
   color: #333;
 }
 
@@ -135,6 +173,10 @@ button:hover {
   font-weight: 600;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8007feeb23d2f7c335a62c5e5f43dca49723e3b1
 .google-btn {
   width: 100%;
   display: flex;
@@ -149,7 +191,10 @@ button:hover {
   padding: 12px;
   cursor: pointer;
   transition: background 0.3s ease;
+<<<<<<< HEAD
   font-size: 15px;
+=======
+>>>>>>> 8007feeb23d2f7c335a62c5e5f43dca49723e3b1
 }
 
 .google-btn:hover {
@@ -165,6 +210,7 @@ button:hover {
   text-align: center;
   margin-top: 10px;
   font-weight: bold;
+<<<<<<< HEAD
   font-size: 15px;
 }
 
@@ -176,4 +222,6 @@ button:hover {
   padding: 20px;
   font-size: 16px;
   font-weight: 500;
+=======
+>>>>>>> 8007feeb23d2f7c335a62c5e5f43dca49723e3b1
 }

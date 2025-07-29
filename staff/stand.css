@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body, html {
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* LEFT SIDE - Background Image */
+.left {
+  flex: 1;
+  background-image: url('cust_page.jpg'); /* Replace with your image name */
+  background-size: cover;
+  background-position: center;
+}
+
+/* RIGHT SIDE - Login Form */
+.right {
+  flex: 1;
+  background-color: #FFF6E6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-box {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
+  width: 90%;
+  max-width: 360px;
+  text-align: center;
+}
+
+.login-box img {
+  width: 70px;
+  margin-bottom: 15px;
+}
+
+.login-box h2 {
+  margin-bottom: 16px;
+  font-size: 24px;
+  color: #2C3A4D;
+}
+
+label {
+  display: block;
+  text-align: left;
+  margin: 6px 0 4px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #2C3A4D;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 16px;
+  background: linear-gradient(to right, #FFD700, #FFA500);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.3s ease;
+  box-shadow: 0 4px 10px rgba(255, 165, 0, 0.3);
+}
+
+button:hover {
+  transform: scale(1.02);
+  opacity: 0.95;
+}
+
+.register-link {
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+.register-link a {
+  color: #2C3A4D;
+  text-decoration: none;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+/* FOOTER */
+.footer {
+  background-color: #2C3A4D;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 16px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  font-weight: 500;
+}
+
+/* Responsive - Stack on mobile */
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .left {
+    height: 200px;
+    width: 100%;
+  }
+
+  .right {
+    flex: none;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .footer {
+    font-size: 14px;
+    padding: 14px 0;
+  }
+}

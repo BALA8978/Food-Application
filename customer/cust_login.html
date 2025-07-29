@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Customer Login - Gourmet Delight</title>
+  <!-- Corrected the CSS file link -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="main-container">
+    <div class="left">
+      <div class="login-box">
+        <img src="logo_food.png" alt="Gourmet Delight Logo" onerror="this.style.display='none'">
+        <h2>Customer Login</h2>
+        <!-- Added an ID to the form for JavaScript -->
+        <form id="loginForm">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+          <button type="submit">Login</button>
+          <!-- Added a paragraph for login messages -->
+          <p id="loginMessage"></p>
+        </form>
+
+        <div class="register-link">
+          Don't have an account? <a href="cust.html">Register here</a>
+        </div>
+      </div>
+    </div>
+    <div class="right"></div>
+  </div>
+
+  <footer class="footer">
+    <p>&copy; 2025 Gourmet Delight. All rights reserved.</p>
+  </footer>
+
+  <!-- This now points to the correct login script -->
+  <script src="cust_login_script.js"></script>
+
+</body>
+</html>
