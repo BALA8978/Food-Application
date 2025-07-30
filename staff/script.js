@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const formData = new FormData(form);
 
       // Fetch data to the correct PHP file
-      fetch('cust_register.php', {
+      fetch('register.php', {
         method: 'POST',
         body: formData
       })
@@ -42,7 +42,6 @@ document.addEventListener("DOMContentLoaded", () => {
         message.innerText = data.message;
 
         if (data.status === 'success') {
-           message.innerText = 'Registered Successfully.';
           message.style.color = 'green';
           form.reset(); // Clear the form on success
         } else {

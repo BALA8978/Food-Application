@@ -13,9 +13,8 @@ $dbname = "gourmet_delight";
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 // Check the connection for errors.
-// If an error occurs, the script will stop and show the error message.
-// This is crucial for debugging.
 if ($conn->connect_error) {
+    // This stops the script and shows the error, which is crucial for debugging.
     die("Database Connection Failed: " . $conn->connect_error);
 }
 ?>

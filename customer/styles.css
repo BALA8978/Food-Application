@@ -1,179 +1,122 @@
 * {
-  box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
 }
 
-body {
-  display: flex;
-  flex-direction: column;
+body, html {
   min-height: 100vh;
-  background-color: #f5f5f5;
-  font-size: 17px; /* Increased font size */
+  background-color: #FFF6E6;
 }
 
-/* Main layout for image and form */
 .main-content {
   display: flex;
-  flex: 1;
+  min-height: 100vh;
 }
 
-/* Left Image Section */
+/* Left side with the background image */
 .left-image {
-  width: 60%;
-  background-image: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092');
+  flex: 1;
+  background-image: url('cust_page.jpg');
   background-size: cover;
   background-position: center;
 }
 
-/* Right Form Section */
+/* Right side with the form */
 .form-side {
-  width: 40%;
-  background-color: #fff;
+  flex: 1;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   padding: 40px;
-  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
 }
 
 .form-container {
+  background-color: #ffffff;
+  padding: 30px 40px;
+  border-radius: 14px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
   width: 100%;
-  max-width: 380px;
+  max-width: 420px;
+  text-align: center;
+}
+
+.logo-container {
+  margin-bottom: 20px;
+}
+
+.logo-container img {
+  width: 80px;
 }
 
 h2 {
-  text-align: center;
   margin-bottom: 25px;
-  color: #333;
+  font-size: 22px;
+  color: #2C3A4D;
 }
 
 label {
-  margin-top: 12px;
   display: block;
+  text-align: left;
+  margin: 10px 0 5px;
+  font-size: 14px;
   font-weight: 600;
-  font-size: 15px;
+  color: #333;
 }
 
-input, select {
+input {
   width: 100%;
-  padding: 10px;
-  margin-top: 6px;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
   border: 1px solid #ccc;
-  border-radius: 6px;
   font-size: 15px;
 }
 
 button {
   width: 100%;
   padding: 12px;
-  background: linear-gradient(to right, #FFD700, #FFA500);
+  margin-top: 10px;
+  background: linear-gradient(to right, #FFC107, #FF8C00);
   color: white;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
-  transition: transform 0.2s ease, opacity 0.3s ease;
-  box-shadow: 0 4px 10px rgba(255, 165, 0, 0.3);
-  margin-top: 16px;  /* 👈 Add this line */
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
-
 
 button:hover {
-  transform: scale(1.02);
-  opacity: 0.95;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(255, 140, 0, 0.3);
 }
 
-.separator {
-  text-align: center;
-  margin-top: 15px;
-  margin-bottom: 10px;
-  color: #999;
-  position: relative;
+.signin-text, .register-link {
+  margin-top: 20px;
+  font-size: 14px;
 }
 
-.separator::before,
-.separator::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  width: 40%;
-  height: 1px;
-  background: #ccc;
-}
-
-.separator::before {
-  left: 0;
-}
-
-.separator::after {
-  right: 0;
-}
-
-.logo-container {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.logo-container img {
-  width: 80px;
-  height: auto;
-}
-
-.signin-text {
-  text-align: center;
-  margin-top: 15px;
-  font-size: 15px;
-  color: #333;
-}
-
-.signin-text a {
-  color: #ff6347;
+.signin-text a, .register-link a {
+  color: #FF8C00;
   text-decoration: none;
   font-weight: 600;
 }
 
-.google-btn {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  background-color: white;
-  color: #444;
-  font-weight: 500;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  padding: 12px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-  font-size: 15px;
+.signin-text a:hover, .register-link a:hover {
+  text-decoration: underline;
 }
 
-.google-btn:hover {
-  background-color: #f0f0f0;
-}
-
-.google-btn img {
-  width: 20px;
-  height: 20px;
-}
-
-#message {
-  text-align: center;
-  margin-top: 10px;
-  font-weight: bold;
-  font-size: 15px;
-}
-
-/* Footer Styling */
-.site-footer {
-  background-color: #2C3A4D;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  font-size: 16px;
-  font-weight: 500;
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+  }
+  .left-image {
+    display: none; /* Hide image on small screens to save space */
+  }
+  .form-side {
+    padding: 20px;
+  }
 }

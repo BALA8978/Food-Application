@@ -4,17 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Customer Login - Gourmet Delight</title>
-  <!-- Corrected the CSS file link -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <div class="main-container">
-    <div class="left">
-      <div class="login-box">
-        <img src="logo_food.png" alt="Gourmet Delight Logo" onerror="this.style.display='none'">
-        <h2>Customer Login</h2>
-        <!-- Added an ID to the form for JavaScript -->
+  <div class="main-content">
+    <div class="left-image"></div>
+    <div class="form-side">
+      <div class="form-container">
+        <div class="logo-container">
+          <img src="logo_food.png" alt="Gourmet Delight Logo" onerror="this.style.display='none'">
+        </div>
+        <h2>Welcome Back!</h2>
         <form id="loginForm">
           <label for="email">Email Address</label>
           <input type="email" id="email" name="email" placeholder="Enter your email" required>
@@ -23,8 +24,7 @@
           <input type="password" id="password" name="password" placeholder="Enter your password" required>
 
           <button type="submit">Login</button>
-          <!-- Added a paragraph for login messages -->
-          <p id="loginMessage"></p>
+          <p id="loginMessage" style="margin-top: 15px;"></p>
         </form>
 
         <div class="register-link">
@@ -32,15 +32,10 @@
         </div>
       </div>
     </div>
-    <div class="right"></div>
   </div>
 
-  <footer class="footer">
-    <p>&copy; 2025 Gourmet Delight. All rights reserved.</p>
-  </footer>
-
-  <!-- This now points to the correct login script -->
-  <script src="cust_login_script.js"></script>
+  <!-- Points to the specific script for customer login -->
+  <script src="login_script.js"></script>
 
 </body>
 </html>

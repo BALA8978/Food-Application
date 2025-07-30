@@ -1,8 +1,5 @@
 <?php
-// Start a session to store login state
 session_start();
-
-// Include the database connection
 include 'db_connect.php';
 
 header('Content-Type: application/json');
@@ -33,9 +30,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                 $response['status'] = 'success';
                 $response['message'] = 'Login successful! Redirecting...';
-                // In a real app, you would redirect here using JavaScript
-                // $response['redirect'] = 'customer_dashboard.html';
-
             } else {
                 // Incorrect password
                 $response['message'] = 'Incorrect email or password.';

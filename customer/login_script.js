@@ -18,17 +18,19 @@ document.addEventListener("DOMContentLoaded", () => {
         message.textContent = data.message;
         if (data.status === 'success') {
           message.style.color = 'green';
-          // Optional: Redirect to a dashboard after a short delay
+          
+          // This is the line that was commented out. It will now run.
           setTimeout(() => {
-            // window.location.href = 'customer_dashboard.html'; // Example redirect
-          }, 1500);
+            window.location.href = 'customer_dashboard.html'; // Redirect to the dashboard
+          }, 1500); // Wait 1.5 seconds before redirecting
+
         } else {
           message.style.color = 'red';
         }
       })
       .catch(error => {
         console.error('Error:', error);
-        message.textContent = 'A network error occurred.';
+        message.textContent = 'A network error occurred. Please try again.';
         message.style.color = 'red';
       });
     });

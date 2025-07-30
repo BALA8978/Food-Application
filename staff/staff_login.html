@@ -14,14 +14,15 @@
       <div class="login-box">
         <img src="logo_food.png" alt="Gourmet Delight Logo">
         <h2>Staff Login</h2>
-        <form>
-          <label for="email">Email or Phone</label>
-          <input type="text" id="email" name="email" placeholder="Enter your email or phone" required>
+        <form id="loginForm">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required>
 
           <label for="password">Password</label>
           <input type="password" id="password" name="password" placeholder="Enter your password" required>
 
           <button type="submit">Login</button>
+          <p id="loginMessage" style="margin-top: 15px;"></p>
         </form>
 
         <div class="register-link">
@@ -38,6 +39,6 @@
     <p>&copy; 2025 Gourmet Delight. All rights reserved.</p>
   </footer>
 
-  <script src="cust_script.js"></script>
+  <script src="login_script.js"></script>
 </body>
 </html>
