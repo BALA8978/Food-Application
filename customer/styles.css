@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body, html {
+  min-height: 100vh;
+  background-color: #FFF6E6;
+}
+
+.main-content {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Left side with the background image */
+.left-image {
+  flex: 1;
+  background-image: url('cust_page.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Right side with the form */
+.form-side {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.form-container {
+  background-color: #ffffff;
+  padding: 30px 40px;
+  border-radius: 14px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+}
+
+.logo-container {
+  margin-bottom: 20px;
+}
+
+.logo-container img {
+  width: 80px;
+}
+
+h2 {
+  margin-bottom: 25px;
+  font-size: 22px;
+  color: #2C3A4D;
+}
+
+label {
+  display: block;
+  text-align: left;
+  margin: 10px 0 5px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background: linear-gradient(to right, #FFC107, #FF8C00);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(255, 140, 0, 0.3);
+}
+
+.signin-text, .register-link {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.signin-text a, .register-link a {
+  color: #FF8C00;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.signin-text a:hover, .register-link a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+  }
+  .left-image {
+    display: none; /* Hide image on small screens to save space */
+  }
+  .form-side {
+    padding: 20px;
+  }
+}
