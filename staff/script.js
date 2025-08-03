@@ -15,12 +15,15 @@ document.addEventListener("DOMContentLoaded", () => {
       message.innerText = "";
       message.style.color = "red";
 
+      // Regex for password: at least 8 chars, 1 uppercase, 1 digit, 1 special char (@, _, .)
+      const passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[@_.]).{8,}$/;
+
       if (!/^\d{10}$/.test(phone)) {
         message.innerText = "Phone number must be exactly 10 digits.";
         return;
       }
-      if (password.length < 8) {
-        message.innerText = "Password must be at least 8 characters.";
+      if (!passwordRegex.test(password)) {
+        message.innerText = "Password must be at least 8 characters, with 1 uppercase, 1 digit, and 1 special character (@, _, .).";
         return;
       }
       if (password !== confirm) {
