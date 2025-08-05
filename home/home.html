@@ -5,35 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Gourmet Delight Menu</title>
   <link rel="stylesheet" href="home.css">
-</head> 
+</head>
 <body>
 
   <header class="main-header">
-    <img src="logo_food.png" alt="Gourmet Delight Logo" style="width: 120px; margin-bottom: 20px;">
+    <img src="logo_food.png" alt="Gourmet Delight Logo" class="logo">
     <div class="site-title">Gourmet Delight</div>
     <nav class="nav-links">
-      <a href="#">Home</a>
+      <a href="../index.html">Home</a>
       <a href="#">Cart</a>
       <a href="#">Orders</a>
       <a href="#">Profile</a>
     </nav>
   </header>
 
-  
-
   <div class="category-buttons">
     <button onclick="filterDishes('all')">All</button>
+    <button onclick="filterDishes('starters')">Starters</button>
     <button onclick="filterDishes('veg')">Veg</button>
     <button onclick="filterDishes('nonveg')">Non-Veg</button>
-    <button onclick="filterDishes('dessert')">Desserts</button>
     <button onclick="filterDishes('snack')">Snacks</button>
+    <button onclick="filterDishes('dessert')">Desserts</button>
   </div>
 
   <main>
     <div id="menu-container" class="grid-container">
-      <!-- Dishes will be inserted here -->
+      <!-- Dishes will be rendered here -->
     </div>
   </main>
+
+  
+<a href="../home/reservation.html" class="reserve-btn">Reserve Table</a>
+
 
   <footer>
     <p>&copy; 2025 Gourmet Delight. All rights reserved.</p>
