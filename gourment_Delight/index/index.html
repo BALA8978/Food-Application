@@ -1,24 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Gourmet Delight - Home</title>
-  <link rel="stylesheet" href="home.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gourmet Delight | Home</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <img src="images/logo.png" alt="Gourmet Delight Logo" class="nav-logo">
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="cart.html">Cart</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
 
-  <div class="hero">
-    <header>
-      <img src="images/logo.png" alt="Gourmet Delight Logo" class="logo">
-    </header>
-
-    <div class="hero-text">
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
       <h1>Welcome to <span>Gourmet Delight</span></h1>
       <p>Delicious food, made with love.</p>
-      <a href="select-role.html" class="btn">Order Now</a>
+      <a href="menu.html" class="order-btn">Order Now</a>
+      <div class="features">
+        <span>✅ Fresh Ingredients</span>
+        <span>🚚 Fast Delivery</span>
+        <span>🧑‍🍳 Expert Chefs</span>
+      </div>
     </div>
-  </div>
-
+  </section>
 </body>
 </html>
