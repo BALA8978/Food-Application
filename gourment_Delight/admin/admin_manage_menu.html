@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin - Manage Menu</title>
+  <link rel="stylesheet" href="admin_manage_menu.css">
+</head>
+<body>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="logo">
+      <img src="images/logo.png" alt="Gourmet Delight Logo">
+      <h2>Gourmet Delight</h2>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="admin_dashboard.html">📊 Dashboard</a></li>
+        <li class="active"><a href="admin_manage_menu.html">🍽 Manage Menu</a></li>
+        <li><a href="admin_manage_orders.html">📦 Manage Orders</a></li>
+        <li><a href="admin_reservations.html">📅 Reservations</a></li>
+        <li><a href="admin_assign_orders.html">👨‍🍳 Assign Orders</a></li>
+        <li><a href="admin_reports.html">📈 Reports</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <div class="main">
+    <!-- Topbar -->
+    <header class="topbar">
+      <h1>Manage Menu</h1>
+      <div class="profile">
+        <span class="notif">🔔 <span class="badge">5</span></span>
+        <span class="admin-name">Admin ⬇</span>
+      </div>
+    </header>
+
+    <!-- Menu Items Table -->
+    <section class="content">
+      <div class="card table-card">
+        <h3>Menu Items</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>S.No</th>
+              <th>Item</th>
+              <th>Category</th>
+              <th>Price (₹)</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td><td>Paneer Butter Masala</td><td>Curries</td><td>200</td>
+              <td><span class="status active">Active</span></td>
+              <td><button class="edit">Edit</button> <button class="delete">Delete</button></td>
+            </tr>
+            <tr>
+              <td>2</td><td>Chicken Biryani</td><td>Biryani</td><td>220</td>
+              <td><span class="status active">Active</span></td>
+              <td><button class="edit">Edit</button> <button class="delete">Delete</button></td>
+            </tr>
+            <tr>
+              <td>3</td><td>Ice Cream</td><td>Dessert</td><td>80</td>
+              <td><span class="status inactive">Inactive</span></td>
+              <td><button class="edit">Edit</button> <button class="delete">Delete</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Add Item Form -->
+      <div class="card form-card">
+        <h3>Add New Item</h3>
+        <form>
+          <input type="text" placeholder="Item Name" required>
+          <select required>
+            <option value="">Select Category</option>
+            <option>Biryani</option>
+            <option>Starters</option>
+            <option>Curries</option>
+            <option>Desserts</option>
+            <option>Beverages</option>
+          </select>
+          <input type="number" placeholder="Price ₹" required>
+          <select required>
+            <option value="">Status</option>
+            <option>Active</option>
+            <option>Inactive</option>
+          </select>
+          <button type="submit">➕ Add Item</button>
+        </form>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

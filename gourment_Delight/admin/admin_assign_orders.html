@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin - Assign Orders</title>
+  <link rel="stylesheet" href="admin_assign_orders.css">
+</head>
+<body>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="logo">
+      <img src="images/logo.png" alt="Gourmet Delight Logo">
+      <h2>Gourmet Delight</h2>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="admin_dashboard.html">📊 Dashboard</a></li>
+        <li><a href="admin_manage_menu.html">🍽 Manage Menu</a></li>
+        <li><a href="admin_manage_orders.html">📦 Manage Orders</a></li>
+        <li><a href="admin_reservations.html">📅 Reservations</a></li>
+        <li class="active"><a href="admin_assign_orders.html">👨‍🍳 Assign Orders</a></li>
+        <li><a href="admin_reports.html">📈 Reports</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <div class="main">
+    <!-- Topbar -->
+    <header class="topbar">
+      <h1>Assign Orders</h1>
+      <div class="profile">
+        <span class="notif">🔔 <span class="badge">4</span></span>
+        <span class="admin-name">Admin ⬇</span>
+      </div>
+    </header>
+
+    <!-- Orders Table -->
+    <section class="content">
+      <div class="card table-card">
+        <h3>Unassigned Orders</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Order ID</th>
+              <th>Customer</th>
+              <th>Items</th>
+              <th>Total</th>
+              <th>Status</th>
+              <th>Assign To</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>O501</td><td>Lahari</td><td>Paneer Biryani, Coke</td><td>₹260</td>
+              <td><span class="status pending">Pending</span></td>
+              <td>
+                <select>
+                  <option value="">-- Select Staff --</option>
+                  <option value="Chef Kumar">Chef Kumar</option>
+                  <option value="Chef Rao">Chef Rao</option>
+                  <option value="Waiter Ravi">Waiter Ravi</option>
+                </select>
+                <button class="assign">Assign</button>
+              </td>
+            </tr>
+            <tr>
+              <td>O502</td><td>Pranavi</td><td>Chicken Curry, Roti</td><td>₹340</td>
+              <td><span class="status pending">Pending</span></td>
+              <td>
+                <select>
+                  <option value="">-- Select Staff --</option>
+                  <option value="Chef Mani">Chef Mani</option>
+                  <option value="Waiter Suresh">Waiter Suresh</option>
+                </select>
+                <button class="assign">Assign</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Staff Table -->
+      <div class="card table-card">
+        <h3>Available Staff</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Staff ID</th>
+              <th>Name</th>
+              <th>Role</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>S101</td><td>Chef Kumar</td><td>Chef</td><td><span class="status available">Available</span></td></tr>
+            <tr><td>S102</td><td>Chef Rao</td><td>Chef</td><td><span class="status available">Available</span></td></tr>
+            <tr><td>S103</td><td>Chef Mani</td><td>Chef</td><td><span class="status busy">Busy</span></td></tr>
+            <tr><td>S201</td><td>Waiter Ravi</td><td>Waiter</td><td><span class="status available">Available</span></td></tr>
+            <tr><td>S202</td><td>Waiter Suresh</td><td>Waiter</td><td><span class="status busy">Busy</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

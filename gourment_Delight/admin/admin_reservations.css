@@ -1,0 +1,141 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  background: #f4f4f9;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background: #1f2937;
+  color: white;
+  height: 100vh;
+  padding: 20px;
+  position: fixed;
+}
+.sidebar .logo {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.sidebar .logo img {
+  width: 70px;
+}
+.sidebar .logo h2 {
+  font-size: 18px;
+  margin-top: 10px;
+}
+.sidebar nav ul {
+  list-style: none;
+}
+.sidebar nav ul li {
+  margin: 15px 0;
+}
+.sidebar nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  display: block;
+  padding: 8px;
+  border-radius: 5px;
+}
+.sidebar nav ul li.active a,
+.sidebar nav ul li a:hover {
+  background: #ff6600;
+  color: white;
+}
+
+/* Main */
+.main {
+  margin-left: 250px;
+  width: calc(100% - 250px);
+}
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ff6600;
+  color: white;
+  padding: 15px 20px;
+}
+.topbar .profile {
+  display: flex;
+  align-items: center;
+}
+.topbar .notif {
+  margin-right: 20px;
+  position: relative;
+}
+.badge {
+  background: red;
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 50%;
+  position: absolute;
+  top: -8px;
+  right: -10px;
+}
+
+/* Content */
+.content {
+  padding: 20px;
+}
+.card {
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.table-card table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.table-card th, .table-card td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+.table-card th {
+  background: #1f2937;
+  color: white;
+}
+
+/* Status Colors */
+.status.pending {
+  color: orange;
+  font-weight: bold;
+}
+.status.approved {
+  color: green;
+  font-weight: bold;
+}
+.status.cancelled {
+  color: red;
+  font-weight: bold;
+}
+
+/* Action Buttons */
+button.approve {
+  background: #06d6a0;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  margin-right: 5px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+button.cancel {
+  background: #ef476f;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}

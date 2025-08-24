@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage Users - Gourmet Delight</title>
+  <link rel="stylesheet" href="admin_manage_users.css">
+</head>
+<body>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="logo">
+      <img src="images/logo.png" alt="Gourmet Delight Logo">
+      <h2>Gourmet Delight</h2>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="admin_dashboard.html">📊 Dashboard</a></li>
+        <li><a href="admin_manage_menu.html">🍽 Manage Menu</a></li>
+        <li><a href="admin_manage_orders.html">📦 Manage Orders</a></li>
+        <li><a href="admin_reservations.html">📅 Reservations</a></li>
+        <li><a href="admin_assign_orders.html">👨‍🍳 Assign Orders</a></li>
+        <li><a href="admin_reports.html">📈 Reports</a></li>
+        <li class="active"><a href="admin_manage_users.html">👥 Manage Users</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Main -->
+  <div class="main">
+    <header class="topbar">
+      <h1>Manage Users</h1>
+      <div class="profile">
+        <span class="notif">🔔 <span class="badge">4</span></span>
+        <span class="admin-name">Admin ⬇</span>
+      </div>
+    </header>
+
+    <section class="content">
+      <div class="card">
+        <h3>Registered Users</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>S.No</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Lahari</td>
+              <td>lahari@gmail.com</td>
+              <td>9876543210</td>
+              <td><span class="status active">Active</span></td>
+              <td>
+                <button class="btn edit">Edit</button>
+                <button class="btn delete">Delete</button>
+              </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Pranavi</td>
+              <td>pranavi@gmail.com</td>
+              <td>9123456780</td>
+              <td><span class="status inactive">Inactive</span></td>
+              <td>
+                <button class="btn edit">Edit</button>
+                <button class="btn delete">Delete</button>
+              </td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Nikhila</td>
+              <td>nikki@gmail.com</td>
+              <td>9988776655</td>
+              <td><span class="status active">Active</span></td>
+              <td>
+                <button class="btn edit">Edit</button>
+                <button class="btn delete">Delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

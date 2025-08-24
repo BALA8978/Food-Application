@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin - Reservations</title>
+  <link rel="stylesheet" href="admin_reservations.css">
+</head>
+<body>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="logo">
+      <img src="images/logo.png" alt="Gourmet Delight Logo">
+      <h2>Gourmet Delight</h2>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="admin_dashboard.html">📊 Dashboard</a></li>
+        <li><a href="admin_manage_menu.html">🍽 Manage Menu</a></li>
+        <li><a href="admin_manage_orders.html">📦 Manage Orders</a></li>
+        <li class="active"><a href="admin_reservations.html">📅 Reservations</a></li>
+        <li><a href="admin_assign_orders.html">👨‍🍳 Assign Orders</a></li>
+        <li><a href="admin_reports.html">📈 Reports</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <div class="main">
+    <!-- Topbar -->
+    <header class="topbar">
+      <h1>Manage Reservations</h1>
+      <div class="profile">
+        <span class="notif">🔔 <span class="badge">2</span></span>
+        <span class="admin-name">Admin ⬇</span>
+      </div>
+    </header>
+
+    <!-- Reservations Table -->
+    <section class="content">
+      <div class="card table-card">
+        <h3>Upcoming Reservations</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Reservation ID</th>
+              <th>Customer</th>
+              <th>Date</th>
+              <th>Time</th>
+              <th>Guests</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>R201</td><td>Lahari</td><td>2025-08-30</td><td>7:00 PM</td><td>4</td>
+              <td><span class="status cancelled">Cancelled</span></td>
+              <td>
+                <button class="approve">Approve</button>
+                <button class="cancel">Cancel</button>
+              </td>
+            </tr>
+            <tr>
+              <td>R202</td><td>Pranavi</td><td>2025-08-31</td><td>1:00 PM</td><td>2</td>
+              <td><span class="status approved">Approved</span></td>
+              <td>
+                <button class="cancel">Cancel</button>
+              </td>
+            </tr>
+            <tr>
+              <td>R203</td><td>Nikhila</td><td>2025-09-01</td><td>8:30 PM</td><td>6</td>
+              <td><span class="status pending">Pending</span></td>
+              <td>
+                <button class="approve">Approve</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

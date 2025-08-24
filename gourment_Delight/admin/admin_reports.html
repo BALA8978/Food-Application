@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Reports - Gourmet Delight</title>
+  <link rel="stylesheet" href="admin_reports.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="logo">
+      <img src="images/logo.png" alt="Gourmet Delight Logo">
+      <h2>Gourmet Delight</h2>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="admin_dashboard.html">📊 Dashboard</a></li>
+        <li><a href="admin_manage_menu.html">🍽 Manage Menu</a></li>
+        <li><a href="admin_manage_orders.html">📦 Manage Orders</a></li>
+        <li><a href="admin_reservations.html">📅 Reservations</a></li>
+        <li><a href="admin_assign_orders.html">👨‍🍳 Assign Orders</a></li>
+        <li class="active"><a href="admin_reports.html">📈 Reports</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <div class="main">
+    <!-- Topbar -->
+    <header class="topbar">
+      <h1>Reports</h1>
+      <div class="profile">
+        <span class="notif">🔔 <span class="badge">3</span></span>
+        <span class="admin-name">Admin ⬇</span>
+      </div>
+    </header>
+
+    <!-- Content -->
+    <section class="content">
+      <!-- Sales Report -->
+      <div class="card chart-card">
+        <h3>Monthly Sales Report</h3>
+        <canvas id="salesChart"></canvas>
+      </div>
+
+      <!-- Inventory Report -->
+      <div class="card chart-card">
+        <h3>Inventory Report</h3>
+        <canvas id="inventoryChart"></canvas>
+      </div>
+    </section>
+  </div>
+
+  <!-- ChartJS Code -->
+  <script>
+    // Sales Report Chart
+    const ctxSales = document.getElementById('salesChart');
+    new Chart(ctxSales, {
+      type: 'bar',
+      data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+        datasets: [{
+          label: 'Sales (₹)',
+          data: [12000, 15000, 14000, 18000, 20000, 22000],
+          backgroundColor: '#ff6600'
+        }]
+      }
+    });
+
+    // Inventory Report Chart
+    const ctxInventory = document.getElementById('inventoryChart');
+    new Chart(ctxInventory, {
+      type: 'doughnut',
+      data: {
+        labels: ['Rice', 'Vegetables', 'Meat', 'Dairy', 'Spices'],
+        datasets: [{
+          data: [35, 20, 25, 10, 10],
+          backgroundColor: ['#118AB2', '#06D6A0', '#FFD166', '#EF476F', '#8338EC']
+        }]
+      }
+    });
+  </script>
+</body>
+</html>

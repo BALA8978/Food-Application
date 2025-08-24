@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - Gourmet Delight</title>
+  <link rel="stylesheet" href="admin_dashboard.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="logo">
+      <img src="images/logo.png" alt="Gourmet Delight Logo">
+      <h2>Gourmet Delight</h2>
+    </div>
+    <nav>
+      <ul>
+        <li class="active"><a href="#">📊 Dashboard</a></li>
+        <li><a href="admin_manage_menu.html">🍽 Manage Menu</a></li>
+        <li><a href="admin_manage_orders.html">📦 Manage Orders</a></li>
+        <li><a href="admin_reservations.html">📅 Reservations</a></li>
+        <li><a href="admin_assign_orders.html">👨‍🍳 Assign Orders</a></li>
+        <li><a href="admin_reports.html">📈 Reports</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Main Dashboard -->
+  <div class="main">
+    <!-- Top Navbar -->
+    <header class="topbar">
+      <h1>Admin Dashboard</h1>
+      <div class="profile">
+        <span class="notif">🔔<span class="badge">7</span></span>
+        <span class="admin-name">Admin ⬇</span>
+      </div>
+    </header>
+
+    <!-- Dashboard Content -->
+    <section class="content">
+      <div class="row">
+        <!-- Customers Table -->
+        <div class="card table-card">
+          <h3>Customers</h3>
+          <table>
+            <thead>
+              <tr><th>S.No</th><th>Name</th><th>Email</th><th>Phone</th><th>Status</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>1</td><td>Pranavi</td><td>pranavi@gmail.com</td><td>9876543210</td><td><span class="status active">Active</span></td></tr>
+              <tr><td>2</td><td>Nikhila</td><td>nikhila@gmail.com</td><td>9123456780</td><td><span class="status active">Active</span></td></tr>
+              <tr><td>3</td><td>Lahari</td><td>lahari@gmail.com</td><td>9988776655</td><td><span class="status inactive">Inactive</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Merchants Table -->
+        <div class="card table-card">
+          <h3>Merchants</h3>
+          <table>
+            <thead>
+              <tr><th>S.No</th><th>Name</th><th>Email</th><th>Phone</th><th>Status</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>1</td><td>Chef Kumar</td><td>kumar@gmail.com</td><td>9090909090</td><td><span class="status active">Active</span></td></tr>
+              <tr><td>2</td><td>Chef Rao</td><td>rao@gmail.com</td><td>8080808080</td><td><span class="status active">Active</span></td></tr>
+              <tr><td>3</td><td>Chef Mani</td><td>mani@gmail.com</td><td>7070707070</td><td><span class="status inactive">Inactive</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Charts -->
+      <div class="row">
+        <div class="card chart-card">
+          <h3>Customers Graph</h3>
+          <canvas id="customerChart"></canvas>
+        </div>
+        <div class="card chart-card">
+          <h3>Merchants Graph</h3>
+          <canvas id="merchantChart"></canvas>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ChartJS -->
+  <script>
+    const ctx1 = document.getElementById('customerChart');
+    new Chart(ctx1, {
+      type: 'pie',
+      data: {
+        labels: ['Normal', 'Admin', 'Facebook', 'Google'],
+        datasets: [{
+          data: [60, 10, 15, 15],
+          backgroundColor: ['#EF476F', '#FFD166', '#06D6A0', '#118AB2']
+        }]
+      }
+    });
+
+    const ctx2 = document.getElementById('merchantChart');
+    new Chart(ctx2, {
+      type: 'doughnut',
+      data: {
+        labels: ['Active', 'Inactive'],
+        datasets: [{
+          data: [80, 20],
+          backgroundColor: ['#06D6A0', '#EF476F']
+        }]
+      }
+    });
+  </script>
+</body>
+</html>

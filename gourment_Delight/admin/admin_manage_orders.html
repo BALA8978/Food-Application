@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin - Manage Orders</title>
+  <link rel="stylesheet" href="admin_manage_orders.css">
+</head>
+<body>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="logo">
+      <img src="images/logo.png" alt="Gourmet Delight Logo">
+      <h2>Gourmet Delight</h2>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="admin_dashboard.html">📊 Dashboard</a></li>
+        <li><a href="admin_manage_menu.html">🍽 Manage Menu</a></li>
+        <li class="active"><a href="admin_manage_orders.html">📦 Manage Orders</a></li>
+        <li><a href="admin_reservations.html">📅 Reservations</a></li>
+        <li><a href="admin_assign_orders.html">👨‍🍳 Assign Orders</a></li>
+        <li><a href="admin_reports.html">📈 Reports</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <div class="main">
+    <!-- Topbar -->
+    <header class="topbar">
+      <h1>Manage Orders</h1>
+      <div class="profile">
+        <span class="notif">🔔 <span class="badge">4</span></span>
+        <span class="admin-name">Admin ⬇</span>
+      </div>
+    </header>
+
+    <!-- Orders Table -->
+    <section class="content">
+      <div class="card table-card">
+        <h3>Orders</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Order ID</th>
+              <th>Customer</th>
+              <th>Item</th>
+              <th>Quantity</th>
+              <th>Total (₹)</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>#101</td><td>Lahari</td><td>Paneer Biryani</td><td>2</td><td>360</td>
+              <td><span class="status pending">Pending</span></td>
+              <td>
+                <button class="accept">Accept</button>
+                <button class="reject">Reject</button>
+              </td>
+            </tr>
+            <tr>
+              <td>#102</td><td>Pranavi</td><td>Pizza</td><td>1</td><td>180</td>
+              <td><span class="status accepted">Accepted</span></td>
+              <td>
+                <button class="cancel">Cancel</button>
+              </td>
+            </tr>
+            <tr>
+              <td>#103</td><td>Nikhila</td><td>Ice Cream</td><td>3</td><td>240</td>
+              <td><span class="status accepted">Accepted</span></td>
+              <td>
+                <button class="accept">Accept</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
